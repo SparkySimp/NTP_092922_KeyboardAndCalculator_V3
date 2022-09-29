@@ -44,13 +44,13 @@ namespace NTP_092922_KeyboardAndCalculator
             this.key2 = new System.Windows.Forms.Button();
             this.key1 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.buttonBackspace = new System.Windows.Forms.Button();
+            this.btn_clr = new System.Windows.Forms.Button();
             this.buttonEquals = new System.Windows.Forms.Button();
             this.buttonDivide = new System.Windows.Forms.Button();
             this.buttonMinus = new System.Windows.Forms.Button();
             this.buttonTimes = new System.Windows.Forms.Button();
             this.buttonPlus = new System.Windows.Forms.Button();
-            this.btn_clr = new System.Windows.Forms.Button();
-            this.buttonBackspace = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -231,6 +231,32 @@ namespace NTP_092922_KeyboardAndCalculator
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "İşlemler";
             // 
+            // buttonBackspace
+            // 
+            this.buttonBackspace.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.buttonBackspace.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonBackspace.Location = new System.Drawing.Point(17, 336);
+            this.buttonBackspace.Name = "buttonBackspace";
+            this.buttonBackspace.Size = new System.Drawing.Size(45, 45);
+            this.buttonBackspace.TabIndex = 7;
+            this.buttonBackspace.Text = "←";
+            this.buttonBackspace.UseVisualStyleBackColor = false;
+            this.buttonBackspace.Click += new System.EventHandler(this.buttonBackspace_Click);
+            this.buttonBackspace.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.buttonBackspace_KeyPress);
+            // 
+            // btn_clr
+            // 
+            this.btn_clr.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.btn_clr.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btn_clr.Location = new System.Drawing.Point(17, 285);
+            this.btn_clr.Name = "btn_clr";
+            this.btn_clr.Size = new System.Drawing.Size(45, 45);
+            this.btn_clr.TabIndex = 6;
+            this.btn_clr.Text = "&C";
+            this.btn_clr.UseVisualStyleBackColor = false;
+            this.btn_clr.Click += new System.EventHandler(this.button1_Click);
+            this.btn_clr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btn_clr_KeyPress);
+            // 
             // buttonEquals
             // 
             this.buttonEquals.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -290,32 +316,6 @@ namespace NTP_092922_KeyboardAndCalculator
             this.buttonPlus.UseVisualStyleBackColor = false;
             this.buttonPlus.Click += new System.EventHandler(this.buttonPlus_Click);
             this.buttonPlus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.buttonPlus_KeyPress);
-            // 
-            // btn_clr
-            // 
-            this.btn_clr.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.btn_clr.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_clr.Location = new System.Drawing.Point(17, 285);
-            this.btn_clr.Name = "btn_clr";
-            this.btn_clr.Size = new System.Drawing.Size(45, 45);
-            this.btn_clr.TabIndex = 6;
-            this.btn_clr.Text = "&C";
-            this.btn_clr.UseVisualStyleBackColor = false;
-            this.btn_clr.Click += new System.EventHandler(this.button1_Click);
-            this.btn_clr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btn_clr_KeyPress);
-            // 
-            // buttonBackspace
-            // 
-            this.buttonBackspace.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.buttonBackspace.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonBackspace.Location = new System.Drawing.Point(17, 336);
-            this.buttonBackspace.Name = "buttonBackspace";
-            this.buttonBackspace.Size = new System.Drawing.Size(45, 45);
-            this.buttonBackspace.TabIndex = 7;
-            this.buttonBackspace.Text = "<=";
-            this.buttonBackspace.UseVisualStyleBackColor = false;
-            this.buttonBackspace.Click += new System.EventHandler(this.buttonBackspace_Click);
-            this.buttonBackspace.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.buttonBackspace_KeyPress);
             // 
             // MainForm
             // 
