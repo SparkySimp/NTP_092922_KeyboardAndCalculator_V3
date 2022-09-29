@@ -68,6 +68,7 @@ namespace NTP_092922_KeyboardAndCalculator
             // 
             // lblEkran
             // 
+            this.lblEkran.AutoEllipsis = true;
             this.lblEkran.AutoSize = true;
             this.lblEkran.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblEkran.Location = new System.Drawing.Point(6, 26);
