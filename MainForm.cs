@@ -210,7 +210,7 @@ namespace NTP_092922_KeyboardAndCalculator
             else
                 lblEkran.Text = lblEkran.Text.Substring(0, lblEkran.Text.Length - 1);
         }
-
+        #region
         private void key1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Back)
@@ -312,5 +312,6 @@ namespace NTP_092922_KeyboardAndCalculator
             if (e.KeyChar == (char)Keys.Back)
                 buttonBackspace_Click(sender, e);
         }
+        #endregion
     }
 }
