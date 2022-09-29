@@ -1,7 +1,7 @@
 ﻿
 namespace NTP_092922_KeyboardAndCalculator
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.

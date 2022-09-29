@@ -10,23 +10,42 @@ using System.Windows.Forms;
 
 namespace NTP_092922_KeyboardAndCalculator
 {
+    /// <summary>
+    /// Describes the operation
+    /// </summary>
     public enum Opeartor
     {
+        /// <summary>
+        /// No operation was chosen
+        /// </summary>
         None,
+        /// <summary>
+        /// Operation of additon.
+        /// </summary>
         Add,
+        /// <summary>
+        /// Operation of subtraction.
+        /// </summary>
         Subtract,
+        /// <summary>
+        /// Operation of multiplication.
+        /// </summary>
         Times,
+        /// <summary>
+        /// Operation of division.
+        /// </summary>
         Divide
     }
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         protected Opeartor islem = Opeartor.None;
         protected string sayi = "";
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
-
+        // All `key*` buttons represent their respective numeric keys
+        // All `button*` buttons represent their respective operations
         private void button8_Click(object sender, EventArgs e)
         {
 
