@@ -42,8 +42,15 @@ namespace NTP_092922_KeyboardAndCalculator
             this.key9 = new System.Windows.Forms.Button();
             this.key7 = new System.Windows.Forms.Button();
             this.key0 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.buttonPlus = new System.Windows.Forms.Button();
+            this.buttonTimes = new System.Windows.Forms.Button();
+            this.buttonMinus = new System.Windows.Forms.Button();
+            this.buttonDivide = new System.Windows.Forms.Button();
+            this.buttonEquals = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -187,7 +194,7 @@ namespace NTP_092922_KeyboardAndCalculator
             // key0
             // 
             this.key0.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.key0.Location = new System.Drawing.Point(136, 258);
+            this.key0.Location = new System.Drawing.Point(136, 273);
             this.key0.Name = "key0";
             this.key0.Size = new System.Drawing.Size(45, 45);
             this.key0.TabIndex = 10;
@@ -195,12 +202,83 @@ namespace NTP_092922_KeyboardAndCalculator
             this.key0.UseVisualStyleBackColor = false;
             this.key0.Click += new System.EventHandler(this.key0_Click);
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.buttonEquals);
+            this.groupBox3.Controls.Add(this.buttonDivide);
+            this.groupBox3.Controls.Add(this.buttonMinus);
+            this.groupBox3.Controls.Add(this.buttonTimes);
+            this.groupBox3.Controls.Add(this.buttonPlus);
+            this.groupBox3.Location = new System.Drawing.Point(326, 13);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(85, 424);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "groupBox3";
+            // 
+            // buttonPlus
+            // 
+            this.buttonPlus.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.buttonPlus.Location = new System.Drawing.Point(17, 32);
+            this.buttonPlus.Name = "buttonPlus";
+            this.buttonPlus.Size = new System.Drawing.Size(45, 45);
+            this.buttonPlus.TabIndex = 1;
+            this.buttonPlus.Text = "+";
+            this.buttonPlus.UseVisualStyleBackColor = false;
+            this.buttonPlus.Click += new System.EventHandler(this.buttonPlus_Click);
+            // 
+            // buttonTimes
+            // 
+            this.buttonTimes.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.buttonTimes.Location = new System.Drawing.Point(17, 194);
+            this.buttonTimes.Name = "buttonTimes";
+            this.buttonTimes.Size = new System.Drawing.Size(45, 45);
+            this.buttonTimes.TabIndex = 2;
+            this.buttonTimes.Text = " X";
+            this.buttonTimes.UseVisualStyleBackColor = false;
+            this.buttonTimes.Click += new System.EventHandler(this.buttonTimes_Click);
+            // 
+            // buttonMinus
+            // 
+            this.buttonMinus.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.buttonMinus.Location = new System.Drawing.Point(17, 112);
+            this.buttonMinus.Name = "buttonMinus";
+            this.buttonMinus.Size = new System.Drawing.Size(45, 45);
+            this.buttonMinus.TabIndex = 3;
+            this.buttonMinus.Text = "-";
+            this.buttonMinus.UseVisualStyleBackColor = false;
+            this.buttonMinus.Click += new System.EventHandler(this.buttonMinus_Click);
+            // 
+            // buttonDivide
+            // 
+            this.buttonDivide.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.buttonDivide.Location = new System.Drawing.Point(17, 282);
+            this.buttonDivide.Name = "buttonDivide";
+            this.buttonDivide.Size = new System.Drawing.Size(45, 45);
+            this.buttonDivide.TabIndex = 4;
+            this.buttonDivide.Text = "/";
+            this.buttonDivide.UseVisualStyleBackColor = false;
+            this.buttonDivide.Click += new System.EventHandler(this.buttonDivide_Click);
+            // 
+            // buttonEquals
+            // 
+            this.buttonEquals.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.buttonEquals.Location = new System.Drawing.Point(17, 373);
+            this.buttonEquals.Name = "buttonEquals";
+            this.buttonEquals.Size = new System.Drawing.Size(45, 45);
+            this.buttonEquals.TabIndex = 5;
+            this.buttonEquals.Text = "=";
+            this.buttonEquals.UseVisualStyleBackColor = false;
+            this.buttonEquals.Click += new System.EventHandler(this.buttonEquals_Click);
+            // 
             // Form1
             // 
+            this.AcceptButton = this.buttonEquals;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
-            this.ClientSize = new System.Drawing.Size(329, 450);
+            this.ClientSize = new System.Drawing.Size(423, 450);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
@@ -208,6 +286,7 @@ namespace NTP_092922_KeyboardAndCalculator
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -227,6 +306,12 @@ namespace NTP_092922_KeyboardAndCalculator
         private System.Windows.Forms.Button key3;
         private System.Windows.Forms.Button key2;
         private System.Windows.Forms.Button key1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button buttonEquals;
+        private System.Windows.Forms.Button buttonDivide;
+        private System.Windows.Forms.Button buttonMinus;
+        private System.Windows.Forms.Button buttonTimes;
+        private System.Windows.Forms.Button buttonPlus;
     }
 }
 
