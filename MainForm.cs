@@ -172,6 +172,9 @@ namespace NTP_092922_KeyboardAndCalculator
                     case Opeartor.Divide:
                         sonuc = n1 / n2;
                         break;
+                    case Opeartor.None:
+                        sonuc = n1;
+                        break;
                 }
             }
             catch(DivideByZeroException)
@@ -181,6 +184,13 @@ namespace NTP_092922_KeyboardAndCalculator
                 sayi = "0";
             }
             lblEkran.Text = sonuc.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            sayi = "0";
+            islem = Opeartor.None;
+            lblEkran.Text = "0";
         }
     }
 }

@@ -49,6 +49,7 @@ namespace NTP_092922_KeyboardAndCalculator
             this.buttonMinus = new System.Windows.Forms.Button();
             this.buttonTimes = new System.Windows.Forms.Button();
             this.buttonPlus = new System.Windows.Forms.Button();
+            this.btn_clr = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -205,6 +206,7 @@ namespace NTP_092922_KeyboardAndCalculator
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btn_clr);
             this.groupBox3.Controls.Add(this.buttonEquals);
             this.groupBox3.Controls.Add(this.buttonDivide);
             this.groupBox3.Controls.Add(this.buttonMinus);
@@ -220,7 +222,7 @@ namespace NTP_092922_KeyboardAndCalculator
             // buttonEquals
             // 
             this.buttonEquals.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.buttonEquals.Location = new System.Drawing.Point(17, 373);
+            this.buttonEquals.Location = new System.Drawing.Point(17, 234);
             this.buttonEquals.Name = "buttonEquals";
             this.buttonEquals.Size = new System.Drawing.Size(45, 45);
             this.buttonEquals.TabIndex = 5;
@@ -231,7 +233,7 @@ namespace NTP_092922_KeyboardAndCalculator
             // buttonDivide
             // 
             this.buttonDivide.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.buttonDivide.Location = new System.Drawing.Point(17, 282);
+            this.buttonDivide.Location = new System.Drawing.Point(17, 183);
             this.buttonDivide.Name = "buttonDivide";
             this.buttonDivide.Size = new System.Drawing.Size(45, 45);
             this.buttonDivide.TabIndex = 4;
@@ -242,7 +244,7 @@ namespace NTP_092922_KeyboardAndCalculator
             // buttonMinus
             // 
             this.buttonMinus.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.buttonMinus.Location = new System.Drawing.Point(17, 112);
+            this.buttonMinus.Location = new System.Drawing.Point(17, 83);
             this.buttonMinus.Name = "buttonMinus";
             this.buttonMinus.Size = new System.Drawing.Size(45, 45);
             this.buttonMinus.TabIndex = 3;
@@ -253,7 +255,7 @@ namespace NTP_092922_KeyboardAndCalculator
             // buttonTimes
             // 
             this.buttonTimes.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.buttonTimes.Location = new System.Drawing.Point(17, 194);
+            this.buttonTimes.Location = new System.Drawing.Point(17, 134);
             this.buttonTimes.Name = "buttonTimes";
             this.buttonTimes.Size = new System.Drawing.Size(45, 45);
             this.buttonTimes.TabIndex = 2;
@@ -271,6 +273,17 @@ namespace NTP_092922_KeyboardAndCalculator
             this.buttonPlus.Text = "+";
             this.buttonPlus.UseVisualStyleBackColor = false;
             this.buttonPlus.Click += new System.EventHandler(this.buttonPlus_Click);
+            // 
+            // btn_clr
+            // 
+            this.btn_clr.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.btn_clr.Location = new System.Drawing.Point(17, 285);
+            this.btn_clr.Name = "btn_clr";
+            this.btn_clr.Size = new System.Drawing.Size(45, 45);
+            this.btn_clr.TabIndex = 6;
+            this.btn_clr.Text = "C";
+            this.btn_clr.UseVisualStyleBackColor = false;
+            this.btn_clr.Click += new System.EventHandler(this.button1_Click);
             // 
             // MainForm
             // 
@@ -314,6 +327,7 @@ namespace NTP_092922_KeyboardAndCalculator
         private System.Windows.Forms.Button buttonMinus;
         private System.Windows.Forms.Button buttonTimes;
         private System.Windows.Forms.Button buttonPlus;
+        private System.Windows.Forms.Button btn_clr;
     }
 }
 
