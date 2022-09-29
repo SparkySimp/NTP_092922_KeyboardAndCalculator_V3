@@ -50,6 +50,7 @@ namespace NTP_092922_KeyboardAndCalculator
             this.buttonTimes = new System.Windows.Forms.Button();
             this.buttonPlus = new System.Windows.Forms.Button();
             this.btn_clr = new System.Windows.Forms.Button();
+            this.buttonBackspace = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -101,9 +102,10 @@ namespace NTP_092922_KeyboardAndCalculator
             this.key0.Name = "key0";
             this.key0.Size = new System.Drawing.Size(45, 45);
             this.key0.TabIndex = 10;
-            this.key0.Text = "0";
+            this.key0.Text = "&0";
             this.key0.UseVisualStyleBackColor = false;
             this.key0.Click += new System.EventHandler(this.key0_Click);
+            this.key0.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.key0_KeyPress);
             // 
             // key7
             // 
@@ -112,9 +114,10 @@ namespace NTP_092922_KeyboardAndCalculator
             this.key7.Name = "key7";
             this.key7.Size = new System.Drawing.Size(45, 45);
             this.key7.TabIndex = 9;
-            this.key7.Text = "7";
+            this.key7.Text = "&7";
             this.key7.UseVisualStyleBackColor = false;
             this.key7.Click += new System.EventHandler(this.key7_Click);
+            this.key7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.key7_KeyPress);
             // 
             // key9
             // 
@@ -123,9 +126,10 @@ namespace NTP_092922_KeyboardAndCalculator
             this.key9.Name = "key9";
             this.key9.Size = new System.Drawing.Size(45, 45);
             this.key9.TabIndex = 8;
-            this.key9.Text = "9";
+            this.key9.Text = "&9";
             this.key9.UseVisualStyleBackColor = false;
             this.key9.Click += new System.EventHandler(this.key9_Click);
+            this.key9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.key9_KeyPress);
             // 
             // key6
             // 
@@ -134,9 +138,10 @@ namespace NTP_092922_KeyboardAndCalculator
             this.key6.Name = "key6";
             this.key6.Size = new System.Drawing.Size(45, 45);
             this.key6.TabIndex = 6;
-            this.key6.Text = "6";
+            this.key6.Text = "&6";
             this.key6.UseVisualStyleBackColor = false;
             this.key6.Click += new System.EventHandler(this.key6_Click);
+            this.key6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.key6_KeyPress);
             // 
             // key8
             // 
@@ -145,9 +150,10 @@ namespace NTP_092922_KeyboardAndCalculator
             this.key8.Name = "key8";
             this.key8.Size = new System.Drawing.Size(45, 45);
             this.key8.TabIndex = 5;
-            this.key8.Text = "8";
+            this.key8.Text = "&8";
             this.key8.UseVisualStyleBackColor = false;
             this.key8.Click += new System.EventHandler(this.key8_Click);
+            this.key8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.key8_KeyPress);
             // 
             // key4
             // 
@@ -156,9 +162,10 @@ namespace NTP_092922_KeyboardAndCalculator
             this.key4.Name = "key4";
             this.key4.Size = new System.Drawing.Size(45, 45);
             this.key4.TabIndex = 4;
-            this.key4.Text = "4";
+            this.key4.Text = "&4";
             this.key4.UseVisualStyleBackColor = false;
             this.key4.Click += new System.EventHandler(this.key4_Click);
+            this.key4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.key4_KeyPress);
             // 
             // key5
             // 
@@ -167,9 +174,10 @@ namespace NTP_092922_KeyboardAndCalculator
             this.key5.Name = "key5";
             this.key5.Size = new System.Drawing.Size(45, 45);
             this.key5.TabIndex = 3;
-            this.key5.Text = "5";
+            this.key5.Text = "&5";
             this.key5.UseVisualStyleBackColor = false;
             this.key5.Click += new System.EventHandler(this.key5_Click);
+            this.key5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.key5_KeyPress);
             // 
             // key3
             // 
@@ -178,9 +186,10 @@ namespace NTP_092922_KeyboardAndCalculator
             this.key3.Name = "key3";
             this.key3.Size = new System.Drawing.Size(45, 45);
             this.key3.TabIndex = 2;
-            this.key3.Text = "3";
+            this.key3.Text = "&3";
             this.key3.UseVisualStyleBackColor = false;
             this.key3.Click += new System.EventHandler(this.key3_Click);
+            this.key3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.key3_KeyPress);
             // 
             // key2
             // 
@@ -189,9 +198,10 @@ namespace NTP_092922_KeyboardAndCalculator
             this.key2.Name = "key2";
             this.key2.Size = new System.Drawing.Size(45, 45);
             this.key2.TabIndex = 1;
-            this.key2.Text = "2";
+            this.key2.Text = "&2";
             this.key2.UseVisualStyleBackColor = false;
             this.key2.Click += new System.EventHandler(this.key2_Click);
+            this.key2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.key2_KeyPress);
             // 
             // key1
             // 
@@ -200,12 +210,14 @@ namespace NTP_092922_KeyboardAndCalculator
             this.key1.Name = "key1";
             this.key1.Size = new System.Drawing.Size(45, 45);
             this.key1.TabIndex = 0;
-            this.key1.Text = "1";
+            this.key1.Text = "&1";
             this.key1.UseVisualStyleBackColor = false;
             this.key1.Click += new System.EventHandler(this.key1_Click);
+            this.key1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.key1_KeyPress);
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.buttonBackspace);
             this.groupBox3.Controls.Add(this.btn_clr);
             this.groupBox3.Controls.Add(this.buttonEquals);
             this.groupBox3.Controls.Add(this.buttonDivide);
@@ -217,7 +229,7 @@ namespace NTP_092922_KeyboardAndCalculator
             this.groupBox3.Size = new System.Drawing.Size(85, 424);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
+            this.groupBox3.Text = "İşlemler";
             // 
             // buttonEquals
             // 
@@ -229,6 +241,7 @@ namespace NTP_092922_KeyboardAndCalculator
             this.buttonEquals.Text = "=";
             this.buttonEquals.UseVisualStyleBackColor = false;
             this.buttonEquals.Click += new System.EventHandler(this.buttonEquals_Click);
+            this.buttonEquals.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.buttonEquals_KeyPress);
             // 
             // buttonDivide
             // 
@@ -237,9 +250,10 @@ namespace NTP_092922_KeyboardAndCalculator
             this.buttonDivide.Name = "buttonDivide";
             this.buttonDivide.Size = new System.Drawing.Size(45, 45);
             this.buttonDivide.TabIndex = 4;
-            this.buttonDivide.Text = "/";
+            this.buttonDivide.Text = "&/";
             this.buttonDivide.UseVisualStyleBackColor = false;
             this.buttonDivide.Click += new System.EventHandler(this.buttonDivide_Click);
+            this.buttonDivide.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.buttonDivide_KeyPress);
             // 
             // buttonMinus
             // 
@@ -248,9 +262,10 @@ namespace NTP_092922_KeyboardAndCalculator
             this.buttonMinus.Name = "buttonMinus";
             this.buttonMinus.Size = new System.Drawing.Size(45, 45);
             this.buttonMinus.TabIndex = 3;
-            this.buttonMinus.Text = "-";
+            this.buttonMinus.Text = "&-";
             this.buttonMinus.UseVisualStyleBackColor = false;
             this.buttonMinus.Click += new System.EventHandler(this.buttonMinus_Click);
+            this.buttonMinus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.buttonMinus_KeyPress);
             // 
             // buttonTimes
             // 
@@ -259,9 +274,10 @@ namespace NTP_092922_KeyboardAndCalculator
             this.buttonTimes.Name = "buttonTimes";
             this.buttonTimes.Size = new System.Drawing.Size(45, 45);
             this.buttonTimes.TabIndex = 2;
-            this.buttonTimes.Text = " X";
+            this.buttonTimes.Text = " &*";
             this.buttonTimes.UseVisualStyleBackColor = false;
             this.buttonTimes.Click += new System.EventHandler(this.buttonTimes_Click);
+            this.buttonTimes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.buttonTimes_KeyPress);
             // 
             // buttonPlus
             // 
@@ -270,20 +286,36 @@ namespace NTP_092922_KeyboardAndCalculator
             this.buttonPlus.Name = "buttonPlus";
             this.buttonPlus.Size = new System.Drawing.Size(45, 45);
             this.buttonPlus.TabIndex = 1;
-            this.buttonPlus.Text = "+";
+            this.buttonPlus.Text = "&+";
             this.buttonPlus.UseVisualStyleBackColor = false;
             this.buttonPlus.Click += new System.EventHandler(this.buttonPlus_Click);
+            this.buttonPlus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.buttonPlus_KeyPress);
             // 
             // btn_clr
             // 
             this.btn_clr.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.btn_clr.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_clr.Location = new System.Drawing.Point(17, 285);
             this.btn_clr.Name = "btn_clr";
             this.btn_clr.Size = new System.Drawing.Size(45, 45);
             this.btn_clr.TabIndex = 6;
-            this.btn_clr.Text = "C";
+            this.btn_clr.Text = "&C";
             this.btn_clr.UseVisualStyleBackColor = false;
             this.btn_clr.Click += new System.EventHandler(this.button1_Click);
+            this.btn_clr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btn_clr_KeyPress);
+            // 
+            // buttonBackspace
+            // 
+            this.buttonBackspace.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.buttonBackspace.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonBackspace.Location = new System.Drawing.Point(17, 336);
+            this.buttonBackspace.Name = "buttonBackspace";
+            this.buttonBackspace.Size = new System.Drawing.Size(45, 45);
+            this.buttonBackspace.TabIndex = 7;
+            this.buttonBackspace.Text = "<=";
+            this.buttonBackspace.UseVisualStyleBackColor = false;
+            this.buttonBackspace.Click += new System.EventHandler(this.buttonBackspace_Click);
+            this.buttonBackspace.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.buttonBackspace_KeyPress);
             // 
             // MainForm
             // 
@@ -291,6 +323,7 @@ namespace NTP_092922_KeyboardAndCalculator
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
+            this.CancelButton = this.btn_clr;
             this.ClientSize = new System.Drawing.Size(423, 450);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -298,6 +331,8 @@ namespace NTP_092922_KeyboardAndCalculator
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "0-9";
+            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MainForm_KeyPress);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -328,6 +363,7 @@ namespace NTP_092922_KeyboardAndCalculator
         private System.Windows.Forms.Button buttonTimes;
         private System.Windows.Forms.Button buttonPlus;
         private System.Windows.Forms.Button btn_clr;
+        private System.Windows.Forms.Button buttonBackspace;
     }
 }
 

@@ -39,7 +39,7 @@ namespace NTP_092922_KeyboardAndCalculator
     public partial class MainForm : Form
     {
         protected Opeartor islem = Opeartor.None;
-        protected string sayi = "";
+        protected double sayi = 0;
         public MainForm()
         {
             InitializeComponent();
@@ -55,7 +55,6 @@ namespace NTP_092922_KeyboardAndCalculator
         {
             if (lblEkran.Text == "0")
                 lblEkran.Text = "";
-
             lblEkran.Text += "1";
         }
 
@@ -124,34 +123,34 @@ namespace NTP_092922_KeyboardAndCalculator
         private void buttonPlus_Click(object sender, EventArgs e)
         {
             islem = Opeartor.Add;
-            sayi = lblEkran.Text;
+            sayi = double.Parse(lblEkran.Text);
             lblEkran.Text = "0";
         }
 
         private void buttonMinus_Click(object sender, EventArgs e)
         {
             islem = Opeartor.Subtract;
-            sayi = lblEkran.Text;
+            sayi = double.Parse(lblEkran.Text);
             lblEkran.Text = "0";
         }
 
         private void buttonTimes_Click(object sender, EventArgs e)
         {
             islem = Opeartor.Times;
-            sayi = lblEkran.Text;
+            sayi = double.Parse(lblEkran.Text);
             lblEkran.Text = "0";
         }
 
         private void buttonDivide_Click(object sender, EventArgs e)
         {
             islem = Opeartor.Divide;
-            sayi = lblEkran.Text;
+            sayi = double.Parse(lblEkran.Text);
             lblEkran.Text = "0";
         }
 
         private void buttonEquals_Click(object sender, EventArgs e)
         {
-            var n1 = double.Parse(sayi);
+            var n1 = sayi;
             var n2 = double.Parse(lblEkran.Text);
             double sonuc = default;
             try
@@ -181,16 +180,137 @@ namespace NTP_092922_KeyboardAndCalculator
             {
                 MessageBox.Show(caption: "Hata", icon: MessageBoxIcon.Error, buttons: default, text: "Sıfıra bölme yapılamıyor.");
                 islem = Opeartor.None;
-                sayi = "0";
+                sayi = 0;
             }
             lblEkran.Text = sonuc.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            sayi = "0";
+            sayi = 0;
             islem = Opeartor.None;
             lblEkran.Text = "0";
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            buttonEquals.Select();
+        }
+
+        private void MainForm_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Back)
+                buttonBackspace_Click(sender, e);
+        }
+
+        private void buttonBackspace_Click(object sender, EventArgs e)
+        {
+            if (lblEkran.Text.Length == 1)
+                lblEkran.Text = "0";
+            else
+                lblEkran.Text = lblEkran.Text.Substring(0, lblEkran.Text.Length - 1);
+        }
+
+        private void key1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Back)
+                buttonBackspace_Click(sender, e);
+        }
+
+        private void key2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Back)
+                buttonBackspace_Click(sender, e);
+        }
+
+        private void key3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Back)
+                buttonBackspace_Click(sender, e);
+        }
+
+        private void key4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Back)
+                buttonBackspace_Click(sender, e);
+        }
+
+        private void key5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Back)
+                buttonBackspace_Click(sender, e);
+        }
+
+        private void key6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Back)
+                buttonBackspace_Click(sender, e);
+        }
+
+        private void key7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Back)
+                buttonBackspace_Click(sender, e);
+        }
+
+        private void key8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Back)
+                buttonBackspace_Click(sender, e);
+        }
+
+        private void key9_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Back)
+                buttonBackspace_Click(sender, e);
+        }
+
+        private void key0_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Back)
+                buttonBackspace_Click(sender, e);
+        }
+
+        private void buttonPlus_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Back)
+                buttonBackspace_Click(sender, e);
+        }
+
+        private void buttonMinus_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Back)
+                buttonBackspace_Click(sender, e);
+        }
+
+        private void buttonTimes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Back)
+                buttonBackspace_Click(sender, e);
+        }
+
+        private void buttonDivide_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Back)
+                buttonBackspace_Click(sender, e);
+        }
+
+        private void buttonEquals_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Back)
+                buttonBackspace_Click(sender, e);
+        }
+
+        private void btn_clr_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Back)
+                buttonBackspace_Click(sender, e);
+        }
+
+        private void buttonBackspace_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Back)
+                buttonBackspace_Click(sender, e);
         }
     }
 }
